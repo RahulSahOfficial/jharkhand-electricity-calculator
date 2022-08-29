@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand Bill Calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <h1>Jharkhand Bill Calculator</h1>
+            <p class="note">*The calculation is based on chrages based on Electricity Board Website. It may vary in actual bill.</p>
+            <marquee behavior="scroll" direction="left">Note: This is not a official website.</marquee>
+            <div class="form-box">
+                <div class="each-line">
+                    <label for="enter-unit">Enter the Unit (KW)</label>
+                    <input type="number" id="enter-unit">
+                    <span class="error" id="unit-error"></span>
+                </div>
+                <div class="each-line">
+                    <button id="calc-bill"><i class="fa fa-calculator" aria-hidden="true"></i> Calculate</button>
+                </div>
+                <div class="generate">
+                    <p><i class="fa fa-cog fa-spin" aria-hidden="true"></i> Generating...</p>
+                </div>
+            </div>
+            <div class="result-box">
+                <h2>Generated Bill</h2>
+                <div class="bill">
+                    <div class="each-line">
+                        <p class="title">Difference Unit (KW)</p>
+                        <p class="value" id="show-unit">0</p>
+                    </div>
+                    <div class="each-line">
+                        <p class="title">Energy Charge</p>
+                        <p class="value" id="show-energy-charge">₹0</p>
+                    </div>
+                    <div class="each-line">
+                        <p class="title">Fixed Charge</p>
+                        <p class="value" id="show-fixed-charge">₹75.00</p>
+                    </div>
+                    <div class="each-line">
+                        <p class="title">Electricity Duty</p>
+                        <p class="value" id="show-electricity-duty">₹0</p>
+                    </div>
+                    <div class="each-line">
+                        <p class="title">Total Assesment</p>
+                        <p class="value" id="show-total-assesment">₹0</p>
+                    </div>
+                    <div class="each-line">
+                        <p class="title">GOJ Subsidy</p>
+                        <p class="value" id="show-subsidy">₹0</p>
+                    </div>
+                    <div class="each-line main">
+                        <p class="title">Net Payable</p>
+                        <p class="value" id="show-total-payable">₹75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+		<p>© Copyright 2022   |   Created By <a href="https://www.linkedin.com/in/developersah/">Rahul Sah</a></p>
+	</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+    <script src="js/bill.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
