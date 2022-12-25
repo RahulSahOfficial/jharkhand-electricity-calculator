@@ -18,8 +18,13 @@ function calc_charge(unit)
         subsidised_charge+=reduced_unit*rate_200;
 
     elec_duty=(elec_duty_rate*energy_charge)/100
-    subsidy=energy_charge-subsidised_charge-subsidy_extra
     total_assesment=energy_charge+fixed_charge+elec_duty
+
+    if(unit<=100)
+        subsidy=total_assesment
+    else
+        subsidy=energy_charge-subsidised_charge-subsidy_extra
+
     total_payable=total_assesment-subsidy
 
     $("#show-unit").text(unit+"(KW)")
